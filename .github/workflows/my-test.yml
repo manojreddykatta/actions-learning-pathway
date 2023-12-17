@@ -1,0 +1,9 @@
+name: test-hello-world
+on: push
+jobs:
+  job_checkout_from_repo:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout_from_repo
+      uses: checkout/actions@v3
+    - run: echo "$(cat hello_world.txt)"
